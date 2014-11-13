@@ -1,0 +1,13 @@
+nonblock on
+startup_message off
+autodetach on
+nethack on
+defscrollback 5000
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%= %{g}]%?[%1`]%?[%{R} %l%{B} %D %{W}%c%{g}]'
+bindkey "^[[5D" prev  # change window with ctrl-left
+bindkey "^[[5C" next  # change window with ctrl-right
+bindkey "^@" screen -t '% |zsh:'
+bind R screen -t '% |admin:' sudo -s #creates new window with title admin:
+aclchg :window: -rwx #?
+aclchg :window: +x title
